@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Como Identificar Fake News e Mídia Suja | Guia Eleições 2026</title>
+<meta name="description" content="Aprenda a identificar fake news, deepfakes e mídia suja antes das Eleições 2026. Sinais práticos, ferramentas de checagem oficiais e o que mudou com a nova regra do TSE sobre inteligência artificial. Ebook digital com entrega imediata.">
+<meta name="keywords" content="fake news eleições 2026, como identificar fake news, deepfake eleições, mídia suja, desinformação eleitoral, TSE fato ou boato, checagem de notícias, fact checking Brasil, Aos Fatos, Agência Lupa">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://SEUUSUARIO.github.io/fake-news/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Como Identificar Fake News e Mídia Suja, Guia 2026">
+<meta property="og:description" content="Sinais práticos para identificar fake news e deepfakes antes das Eleições 2026, com ferramentas de checagem oficiais.">
+<meta property="og:image" content="https://SEUUSUARIO.github.io/capa-ebook2.jpg">
+<meta property="og:url" content="https://SEUUSUARIO.github.io/fake-news/">
+<meta property="og:locale" content="pt_BR">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Como Identificar Fake News e Mídia Suja">
+<meta name="twitter:description" content="Guia prático com sinais, ferramentas e regras do TSE para não cair em fake news nas Eleições 2026.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Como Identificar Fake News e Mídia Suja",
+  "description": "Guia prático para identificar fake news, deepfakes e mídia suja nas Eleições 2026, com ferramentas de checagem e as novas regras do TSE sobre inteligência artificial.",
+  "inLanguage": "pt-BR",
+  "bookFormat": "EBook",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "BRL",
+    "price": "12.90",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --paper: #e9e3d0;
+    --paper-dark: #ddd5bb;
+    --ink: #1c2029;
+    --ink-soft: #454a52;
+    --stamp-red: #9c2b2b;
+    --verified-green: #3f6b4a;
+    --line: #c9c0a4;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    line-height:1.6;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 3px);
+  }
+
+  .wrap{ max-width:920px; margin:0 auto; padding:0 24px; }
+
+  .casefile-bar{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.04em;
+    padding:10px 0;
+  }
+  .casefile-bar .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  header.hero{ padding:64px 0 40px; border-bottom:2px solid var(--ink); position:relative; }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--stamp-red);
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{ content:''; width:22px; height:1px; background:var(--stamp-red); display:inline-block; }
+
+  h1{
+    font-family:'Libre Caslon Text', serif;
+    font-weight:700;
+    font-size:clamp(2.1rem, 5vw, 3.4rem);
+    line-height:1.12;
+    max-width:15ch;
+    letter-spacing:-0.005em;
+  }
+  h1 em{ font-style:italic; color:var(--stamp-red); font-weight:400; }
+
+  .hero-sub{
+    margin-top:22px;
+    font-size:1.1rem;
+    color:var(--ink-soft);
+    max-width:54ch;
+  }
+
+  .stamp{
+    position:absolute;
+    top:50px; right:24px;
+    width:118px; height:118px;
+    border:3px solid var(--stamp-red);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    transform:rotate(-14deg);
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    font-weight:600;
+    color:var(--stamp-red);
+    text-align:center;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    line-height:1.35;
+    opacity:0.9;
+  }
+  @media (max-width:640px){ .stamp{ display:none; } }
+
+  .cta-row{ margin-top:34px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+  .btn-primary{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'JetBrains Mono', monospace;
+    font-size:14px;
+    letter-spacing:0.03em;
+    padding:15px 28px;
+    text-decoration:none;
+    display:inline-block;
+    border:2px solid var(--ink);
+    transition:all .15s ease;
+  }
+  .btn-primary:hover{ background:transparent; color:var(--ink); }
+  .price-tag{ font-family:'JetBrains Mono', monospace; font-size:13px; color:var(--ink-soft); }
+  .price-tag strong{ color:var(--ink); font-size:1.2em; }
+
+  section.dossie{ padding:56px 0; border-bottom:1px solid var(--line); }
+  .section-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--ink-soft);
+    margin-bottom:20px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .section-label .num{ color:var(--stamp-red); }
+
+  h2{
+    font-family:'Libre Caslon Text', serif;
+    font-size:1.85rem;
+    font-weight:700;
+    margin-bottom:26px;
+    max-width:22ch;
+  }
+
+  .redacted{
+    background:var(--ink);
+    color:var(--ink);
+    padding:1px 6px;
+    border-radius:2px;
+    transition:all .3s ease;
+    cursor:default;
+  }
+  .redacted:hover{ background:transparent; color:var(--ink); outline:1px dashed var(--line); }
+
+  .lede{ font-size:1.05rem; color:var(--ink-soft); max-width:64ch; margin-bottom:12px; }
+
+  .folders{ display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:16px; margin-top:32px; }
+  .folder{
+    background:var(--paper-dark);
+    border:1px solid var(--line);
+    border-top:4px solid var(--ink);
+    padding:20px 18px;
+    position:relative;
+  }
+  .folder .tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .folder h3{
+    font-family:'Libre Caslon Text', serif;
+    font-size:1.15rem;
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  .folder p{ font-size:0.92rem; color:var(--ink-soft); }
+  .folder .marks{ margin-top:14px; display:flex; gap:14px; font-family:'JetBrains Mono', monospace; font-size:12px; }
+  .mark-ok{ color:var(--verified-green); }
+  .mark-x{ color:var(--stamp-red); }
+
+  .chapters{ list-style:none; margin-top:24px; }
+  .chapters li{
+    display:flex; gap:18px; align-items:baseline;
+    padding:16px 0; border-bottom:1px solid var(--line);
+  }
+  .chapters li:first-child{ border-top:1px solid var(--line); }
+  .chapters .idx{ font-family:'JetBrains Mono', monospace; color:var(--stamp-red); font-size:13px; min-width:32px; }
+  .chapters .ch-title{ font-weight:700; font-family:'Libre Caslon Text', serif; font-size:1.05rem; }
+  .chapters .ch-desc{ color:var(--ink-soft); font-size:0.92rem; margin-top:3px; }
+
+  .sources-strip{
+    background:var(--ink);
+    color:var(--paper);
+    padding:28px 0;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.03em;
+  }
+  .sources-strip .wrap{ display:flex; gap:28px; flex-wrap:wrap; justify-content:center; opacity:0.85; }
+
+  .final-cta{ padding:70px 0; text-align:center; }
+  .final-cta h2{ margin:0 auto 18px; max-width:18ch; }
+  .final-cta .lede{ margin:0 auto 30px; }
+  .guarantee{ font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--ink-soft); margin-top:16px; }
+
+  footer{ padding:30px 0 50px; text-align:center; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<div class="casefile-bar">
+  <div class="wrap">
+    <span><a href="index.html" style="color:inherit; text-decoration:none;">← ver todos os guias</a></span>
+    <span>ATUALIZADO EM AGOSTO DE 2026</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Guia eleitoral, edição 2026</div>
+    <h1>Aprenda a identificar <em>fake news</em> antes de compartilhar</h1>
+    <p class="hero-sub">Sinais práticos para reconhecer boato e deepfake, ferramentas de checagem oficiais e o que muda com a nova regra do TSE sobre inteligência artificial nas Eleições 2026.</p>
+    <div class="cta-row">
+      <a href="#comprar" class="btn-primary">Garantir o guia completo</a>
+      <span class="price-tag">De <s>R$ 27,90</s> por <strong>R$ 12,90</strong>. PDF, entrega imediata</span>
+    </div>
+    <div class="stamp">verifique<br>antes<br>de enviar</div>
+  </div>
+</header>
+
+<section class="dossie">
+  <div class="wrap">
+    <div class="section-label"><span class="num">01</span> por que este guia existe</div>
+    <h2>Boato bem contado <span class="redacted">convence mais</span> que fato mal contado</h2>
+    <p class="lede">Este guia não fala sobre nenhum candidato específico. Ensina a reconhecer o mecanismo por trás da desinformação, para você identificar sozinho, não importa de qual lado político o conteúdo venha. Nas últimas eleições, boato circulou mais rápido que fato. Em 2026, com deepfakes hiper-realistas, fica ainda mais fácil cair.</p>
+  </div>
+</section>
+
+<section class="dossie">
+  <div class="wrap">
+    <div class="section-label"><span class="num">02</span> o que você aprende</div>
+    <h2>Cinco sinais que expõem qualquer boato</h2>
+    <div class="folders">
+      <div class="folder">
+        <div class="tag">Sinal 01</div>
+        <h3>Urgência para compartilhar</h3>
+        <p>"Espalhe antes que apaguem" é a ferramenta número um de quem quer que você não pare pra checar.</p>
+        <div class="marks"><span class="mark-x">bandeira vermelha</span></div>
+      </div>
+      <div class="folder">
+        <div class="tag">Sinal 02</div>
+        <h3>Fonte anônima</h3>
+        <p>"Um amigo que trabalha lá dentro" nunca é fonte. Informação real vem de veículo, órgão oficial ou do próprio TSE.</p>
+        <div class="marks"><span class="mark-x">bandeira vermelha</span></div>
+      </div>
+      <div class="folder">
+        <div class="tag">Sinal 03</div>
+        <h3>Áudio ou vídeo "quase perfeito"</h3>
+        <p>Deepfakes de 2026 erram em detalhes: piscar de olhos, sincronia labial, iluminação. Aprenda a notar.</p>
+        <div class="marks"><span class="mark-ok">✓ ensinado no guia</span></div>
+      </div>
+      <div class="folder">
+        <div class="tag">Sinal 04 e 05</div>
+        <h3>Confirmação fácil demais</h3>
+        <p>Se a notícia parece boa demais sobre quem você não gosta, ou circula só em grupo fechado, desconfie em dobro.</p>
+        <div class="marks"><span class="mark-x">bandeira vermelha</span></div>
+      </div>
+    </div>
+    <p class="lede" style="margin-top:22px; font-size:0.95rem;">Mais as ferramentas oficiais de checagem (TSE, Aos Fatos, Agência Lupa, Comprova) e o passo a passo de como agir quando você recebe um boato.</p>
+  </div>
+</section>
+
+<section class="dossie">
+  <div class="wrap">
+    <div class="section-label"><span class="num">03</span> o que vem dentro</div>
+    <h2>Estrutura do guia</h2>
+    <ul class="chapters">
+      <li>
+        <span class="idx">01</span>
+        <div><div class="ch-title">Por que este guia existe</div><div class="ch-desc">O mecanismo psicológico por trás de toda desinformação eficaz.</div></div>
+      </li>
+      <li>
+        <span class="idx">02</span>
+        <div><div class="ch-title">O que muda nas Eleições 2026</div><div class="ch-desc">A nova regra do TSE sobre deepfakes e IA, com casos reais já registrados.</div></div>
+      </li>
+      <li>
+        <span class="idx">03</span>
+        <div><div class="ch-title">Os 5 sinais de desinformação</div><div class="ch-desc">Como reconhecer o padrão, não importa de qual lado político.</div></div>
+      </li>
+      <li>
+        <span class="idx">04</span>
+        <div><div class="ch-title">Ferramentas para checar</div><div class="ch-desc">TSE, Aos Fatos, Agência Lupa, Comprova e busca reversa de imagem.</div></div>
+      </li>
+      <li>
+        <span class="idx">05</span>
+        <div><div class="ch-title">O que fazer ao receber um boato</div><div class="ch-desc">Quatro passos simples antes de encaminhar qualquer coisa.</div></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="sources-strip">
+  <div class="wrap">
+    <span>FONTE: TSE</span>
+    <span>FONTE: SENADO VERIFICA</span>
+    <span>FONTE: AOS FATOS</span>
+    <span>FONTE: AGÊNCIA LUPA</span>
+    <span>FONTE: COMPROVA</span>
+  </div>
+</div>
+
+<section class="final-cta" id="comprar">
+  <div class="wrap">
+    <div class="section-label" style="justify-content:center;"><span class="num">04</span> acesso ao guia</div>
+    <h2>Não seja a próxima vítima de um boato bem feito</h2>
+    <p class="lede">PDF completo, leitura em qualquer celular, envio automático por e-mail após a confirmação do pagamento.</p>
+    <a href="https://link.mercadopago.com.br/studioyami" class="btn-primary" style="font-size:16px; padding:18px 36px;">Comprar por R$ 12,90</a>
+    <div class="guarantee">pagamento via Mercado Pago. Pix, cartão ou boleto<br><strong>Digite R$ 12,90</strong> na tela de pagamento</div>
+  </div>
+</section>
+
+<footer>
+  © 2026. Este material tem fins informativos e não representa apoio a nenhum candidato ou partido.
+</footer>
+
+</body>
+</html>
