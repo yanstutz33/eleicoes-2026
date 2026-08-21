@@ -20,7 +20,13 @@ comprador paga  →  Mercado Pago chama o webhook  →  Apps Script confirma na 
 Tenha em mãos:
 
 - Os **3 PDFs no Google Drive** (dossiê, fake news, combo)
-- Uma conta Mercado Pago com o link de pagamento `link.mercadopago.com.br/studioyami`
+- A conta Mercado Pago com os 3 links de preço fixo já criados:
+
+| Produto | Preço | Link |
+|---|---|---|
+| Dossiê dos candidatos | R$ 14,90 | <https://mpago.la/2vX6BMu> |
+| Guia antifake | R$ 12,90 | <https://mpago.la/24cVvT4> |
+| Combo | R$ 19,90 | <https://mpago.la/2ScG6hb> |
 
 ---
 
@@ -157,9 +163,14 @@ Apps Script, rode:
 reenviarPagamento('123456789')
 ```
 
-**Mudou o preço.** Altere o valor em dois lugares: o objeto `CATALOGO` no
-`Codigo.gs` **e** o texto da landing page correspondente. Se ficarem diferentes,
-o comprador paga um valor que o script não reconhece e a entrega cai no manual.
+**Mudou o preço.** Agora são **três** lugares, e os três precisam bater:
+
+1. o preço do link no painel do Mercado Pago
+2. o objeto `CATALOGO` no `Codigo.gs`
+3. o texto da landing page correspondente
+
+Se o link do MP e o `CATALOGO` divergirem, o comprador paga um valor que o
+script não reconhece e a entrega cai no manual (você recebe um e-mail).
 
 **Mudou o `Codigo.gs`.** Salvar não basta: **Implantar → Gerenciar implantações
 → ✏ → Versão: Nova versão → Implantar**. A URL continua a mesma.
@@ -168,12 +179,14 @@ o comprador paga um valor que o script não reconhece e a entrega cai no manual.
 
 ## Limites e pontos frágeis
 
-- **O valor identifica o produto.** É a consequência do link de valor livre.
-  Se o comprador digitar R$ 15,00 em vez de R$ 14,90, o script não adivinha:
-  registra como `manual` e te manda um e-mail para resolver na mão.
-  *Para eliminar isso:* crie 3 links de **preço fixo** no painel do MP, um por
-  produto, e troque os `href` das landing pages. O código continua funcionando
-  igual, e o valor passa a estar sempre certo.
+- **O valor identifica o produto.** Com os links de preço fixo, o comprador não
+  digita valor nenhum, então na prática isso é confiável. O risco que sobra é
+  você mudar um preço em um lugar só: se o link do MP e o `CATALOGO` ficarem
+  diferentes, a entrega cai no manual. Ver *Mudou o preço* acima.
+- **Os 3 preços precisam continuar diferentes entre si.** Se dois produtos
+  passarem a custar o mesmo, o valor deixa de distinguir um do outro e o script
+  entrega o errado. Nesse caso, me chame para trocar a identificação por
+  `external_reference` em vez de valor.
 - **100 e-mails por dia** é o limite de conta Gmail comum. Acima disso, a
   entrega para até o dia seguinte.
 - **Anexo de até 25 MB.** PDFs maiores precisam virar link em vez de anexo.

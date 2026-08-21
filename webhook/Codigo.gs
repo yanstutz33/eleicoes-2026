@@ -2,9 +2,9 @@
  * Webhook Mercado Pago -> entrega automatica por e-mail.
  * Projeto: eleicoes-2026 (yanstutz33.github.io/eleicoes-2026)
  *
- * Fluxo: comprador paga no link de valor livre -> MP chama este endpoint
- * -> consultamos o pagamento na API do MP -> identificamos o produto pelo
- * valor pago -> enviamos o PDF por e-mail e registramos na planilha.
+ * Fluxo: comprador paga num dos 3 links de preco fixo -> MP chama este
+ * endpoint -> consultamos o pagamento na API do MP -> identificamos o produto
+ * pelo valor pago -> enviamos o PDF por e-mail e registramos na planilha.
  *
  * NENHUMA credencial fica neste arquivo. Tudo vem de Propriedades do Script
  * (Configuracoes do projeto > Propriedades do script). Ver README.md.
@@ -12,20 +12,27 @@
 
 // ---------------------------------------------------------------------------
 // CATALOGO: valor pago (BRL) -> produto entregue
-// Para mudar preco, altere aqui E na landing page correspondente.
+//
+// Cada chave e o preco do link de pagamento correspondente no Mercado Pago.
+// Para mudar um preco, altere em TRES lugares: o link no painel do MP, a chave
+// aqui e o texto da landing page. Se o MP e este catalogo divergirem, a venda
+// cai na entrega manual.
+//
+// Os precos precisam continuar diferentes entre si: e o valor que distingue um
+// produto do outro.
 // ---------------------------------------------------------------------------
 var CATALOGO = {
-  '14.90': {
+  '14.90': { // https://mpago.la/2vX6BMu
     nome: 'Dossie: Erros e Acertos dos Candidatos 2026',
     propArquivo: 'DRIVE_ID_DOSSIE',
     nomeArquivo: 'Dossie-Erros-e-Acertos-dos-Candidatos-2026.pdf'
   },
-  '12.90': {
+  '12.90': { // https://mpago.la/24cVvT4
     nome: 'Guia: Como Identificar Fake News e Midia Suja',
     propArquivo: 'DRIVE_ID_FAKENEWS',
     nomeArquivo: 'Guia-Como-Identificar-Fake-News-2026.pdf'
   },
-  '19.90': {
+  '19.90': { // https://mpago.la/2ScG6hb
     nome: 'Combo: Dossie dos Candidatos + Guia Antifake',
     propArquivo: 'DRIVE_ID_COMBO',
     nomeArquivo: 'Combo-Guias-Eleicoes-2026.pdf'
@@ -143,8 +150,8 @@ function processarPagamento_(pagamentoId) {
     var produto = CATALOGO[valor];
 
     if (!produto) {
-      // Valor digitado errado no link de valor livre. Nao adivinhamos o produto:
-      // registramos e chamamos o dono para resolver na mao.
+      // Com precos fixos isso so acontece se o preco mudou no painel do MP e nao
+      // aqui. Nao adivinhamos o produto: registramos e chamamos o dono.
       registrar_(pagamentoId, email, valor, 'VALOR NAO RECONHECIDO', 'manual');
       alertarDono_(
         'Pagamento de R$ ' + valor + ' sem produto correspondente',
