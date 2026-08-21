@@ -225,10 +225,14 @@ function enviarProduto_(email, produto) {
   var driveId = prop_(produto.propArquivo);
   var blob = DriveApp.getFileById(driveId).getBlob().setName(produto.nomeArquivo);
 
+  // O comprador ve EMAIL_CONTATO, nunca EMAIL_DONO. Sao coisas diferentes de
+  // proposito: EMAIL_DONO recebe alertas de falha e nao precisa ser publico.
+  // Sem EMAIL_CONTATO definido, cai no EMAIL_DONO, entao configure os dois se
+  // nao quiser expor seu e-mail pessoal a quem compra.
   MailApp.sendEmail({
     to: email,
     name: prop_('REMETENTE_NOME', true) || 'Guias Eleicoes 2026',
-    replyTo: prop_('EMAIL_DONO'),
+    replyTo: prop_('EMAIL_CONTATO', true) || prop_('EMAIL_DONO'),
     subject: 'Seu material chegou: ' + produto.nome,
     body: corpoTexto_(produto),
     htmlBody: corpoHtml_(produto),

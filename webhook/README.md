@@ -73,7 +73,8 @@ No Apps Script: **⚙ Configurações do projeto → Propriedades do script → 
 |---|---|---|
 | `MP_ACCESS_TOKEN` | Access token de **produção** do Mercado Pago (passo 5) | sim |
 | `WEBHOOK_TOKEN` | O token que você gerou no passo 3 | sim |
-| `EMAIL_DONO` | `yanstutzmatt@gmail.com` — recebe alertas e é o Responder-para | sim |
+| `EMAIL_DONO` | recebe os alertas de falha. Não aparece para o comprador se você definir `EMAIL_CONTATO` | sim |
+| `EMAIL_CONTATO` | o Responder-para que o **comprador vê**. Se ficar vazio, usa o `EMAIL_DONO` | não |
 | `DRIVE_ID_DOSSIE` | ID do PDF do dossiê (R$ 14,90) | sim |
 | `DRIVE_ID_FAKENEWS` | ID do PDF do guia antifake (R$ 12,90) | sim |
 | `DRIVE_ID_COMBO` | ID do PDF do combo (R$ 19,90) | sim |
