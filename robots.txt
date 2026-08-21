@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yanstutz33.github.io/eleicoes-2026/sitemap.xml
