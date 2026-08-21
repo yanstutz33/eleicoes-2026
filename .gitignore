@@ -1,0 +1,11 @@
+# Este repositório é PÚBLICO e serve o site via GitHub Pages.
+# Os ebooks são o produto pago: se um PDF entrar aqui, qualquer pessoa baixa
+# de graça. Os arquivos-fonte deles ficam em ../eleicoes-2026-ebooks/, fora
+# deste repositório de propósito.
+*.pdf
+
+# Credenciais nunca entram aqui. O token do Mercado Pago, o segredo do webhook
+# e os IDs do Drive ficam nas Propriedades do Script, no Apps Script.
+.env
+*.key
+credenciais*
